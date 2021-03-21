@@ -2,7 +2,7 @@ package Models.Transaction;
 
 import Models.Interfaces.Veiculo;
 
-public class VeiculoUtilitario implements Veiculo {
+public class VeiculoUtilitario implements Veiculo    {
     @Override
     public String getPlaca() {
         return null;
