@@ -9,12 +9,16 @@ public class FdsCatVeiculos {
         CatalogoVeiculos cv = new CatalogoVeiculos();
         cv.initVcat();
         List<Veiculo> lv;
+
+
         Veiculo vv= cv.consultaPorPlaca("FLL123");
         if(vv==null){
             System.out.println("Placa nao encontrada");
         }else{
             vv.printAtrib();
         }
+
+
        lv= cv.consultaPorMarca("GM");
         if(lv.isEmpty()){
             System.out.println("Marca nao encontrada");
@@ -23,6 +27,8 @@ public class FdsCatVeiculos {
                 veiculo.printAtrib();
             }
         }
+
+
         lv= cv.consultaPorAno(2003);
         if(lv.isEmpty()){
             System.out.println("Ano nao encontrado");
@@ -31,6 +37,8 @@ public class FdsCatVeiculos {
                 veiculo.printAtrib();
             }
         }
+
+        
         lv= cv.consultaPorTipo("Passageiro");
         if(lv.isEmpty()){
             System.out.println("Tipo nao encontrado");

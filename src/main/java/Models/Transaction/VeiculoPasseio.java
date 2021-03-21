@@ -55,7 +55,7 @@ public class VeiculoPasseio implements Veiculo {
 
     @Override
     public void printAtrib() {
-        System.out.println("Tipo: Passeio Placa: "+this.placa+" Marca: "+this.marca+" Modelo: "+this.modelo+" Ano: "+this.ano+" Valor: "+this.valor+" Consumo KM por Litro: "+this.kmLitro );
+        System.out.println("Tipo: Passeio    Placa: "+this.placa+" Marca: "+this.marca+" Modelo: "+this.modelo+" Ano: "+this.ano+" Valor: "+this.valor+" Consumo KM por Litro: "+this.kmLitro );
         
     }
 }
