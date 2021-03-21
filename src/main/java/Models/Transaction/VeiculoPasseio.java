@@ -22,7 +22,7 @@ public class VeiculoPasseio implements Veiculo {
 
     @Override
     public String getPlaca() {
-        return null;
+        return this.placa;
     }
 
     @Override
@@ -47,5 +47,11 @@ public class VeiculoPasseio implements Veiculo {
 
     private double consumoKmLt(){
         return 0;
+    }
+
+    @Override
+    public void printAtrib() {
+        System.out.println("Placa: "+this.placa+" Marca: "+this.marca+" Modelo: "+this.modelo+" Ano: "+this.ano+" Valor: "+this.valor+"Consumo KM por Litro: "+this.kmLitro );
+        
     }
 }

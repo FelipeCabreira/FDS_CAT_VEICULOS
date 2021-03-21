@@ -2,6 +2,7 @@ package Controllers;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import Models.Interfaces.Veiculo;
 import Models.Transaction.VeiculoPassageiros;
@@ -9,11 +10,10 @@ import Models.Transaction.VeiculoPasseio;
 import Models.Transaction.VeiculoUtilitario;
 
 public class CatalogoVeiculos {
-    private ArrayList<Veiculo> vcat;
+    private ArrayList<Veiculo> vcat=new ArrayList<>(10);
 
 
     public void initVcat(){
-        vcat=new ArrayList<>(10);
         vcat.add(new VeiculoPassageiros("FGS123","GM","Dala",2000,20000,4));
         vcat.add(new VeiculoPassageiros("WER123","KL","Dok",2001,20100,7));
         vcat.add(new VeiculoPassageiros("FGU123","JY","Dill",2009,20500,2));
@@ -27,8 +27,16 @@ public class CatalogoVeiculos {
         vcat.add(new VeiculoPasseio("FAA123","OJ","Dill",2003,20500,15)); 
     }
 
-    public CatalogoVeiculos() {
-     
+    public List<Veiculo> consultaPorPlaca(String vefPlaca) {
+        
+        ArrayList<Veiculo> vres=new ArrayList<>();
+        for (Veiculo veiculo : vcat) {
+            if(vefPlaca.compareToIgnoreCase(veiculo.getPlaca())==0){
+                vres.add(veiculo);
+                break;
+            }
+        }
+        return vres;
     }
 
 
