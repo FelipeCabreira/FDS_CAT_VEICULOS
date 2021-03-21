@@ -3,6 +3,7 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoPassageiros implements Veiculo {
+    public int numPassageiros=0;
     @Override
     public String getPlaca() {
         return null;

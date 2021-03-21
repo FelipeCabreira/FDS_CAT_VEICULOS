@@ -3,6 +3,10 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoUtilitario implements Veiculo {
+    public int capTon=0;
+    public int numEixos=0;
+    
+    
     @Override
     public String getPlaca() {
         return null;

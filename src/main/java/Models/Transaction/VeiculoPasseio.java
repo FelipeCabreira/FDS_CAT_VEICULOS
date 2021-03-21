@@ -3,6 +3,9 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoPasseio implements Veiculo {
+    public double kmLitro=0;
+    
+    
     @Override
     public String getPlaca() {
         return null;
