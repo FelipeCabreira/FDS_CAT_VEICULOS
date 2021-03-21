@@ -3,8 +3,13 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoUtilitario implements Veiculo {
-    public int capTon=0;
-    public int numEixos=0;
+    public  String placa;
+    public  String marca;
+    public  String modelo;
+    public  int ano;
+    public  double valor;
+    public int capTon;
+    public int numEixos;
     
     
     public VeiculoUtilitario(String placa, String marca, String modelo, int ano, double valor, int cap, int nEixos) {

@@ -3,7 +3,13 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoPassageiros implements Veiculo {
-    public int numPassageiros=0;
+    public  String placa;
+    public  String marca;
+    public  String modelo;
+    public  int ano;
+    public  double valor;
+    public int numPassageiros;
+    
     public VeiculoPassageiros(String placa, String marca, String modelo, int ano, double valor, int nPass) {
         this.placa=placa;
         this.marca=marca;

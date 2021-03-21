@@ -3,7 +3,12 @@ package Models.Transaction;
 import Models.Interfaces.Veiculo;
 
 public class VeiculoPasseio implements Veiculo {
-    public double kmLitro=0;
+    public  String placa;
+    public  String marca;
+    public  String modelo;
+    public  int ano;
+    public  double valor;
+    public double kmLitro;
     
     
     public VeiculoPasseio(String placa, String marca, String modelo, int ano, double valor, int kmLt) {
