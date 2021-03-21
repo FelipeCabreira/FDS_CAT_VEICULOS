@@ -10,8 +10,8 @@ public class VeiculoUtilitario implements Veiculo {
     public  double valor;
     public int capTon;
     public int numEixos;
-    
-    
+
+
     public VeiculoUtilitario(String placa, String marca, String modelo, int ano, double valor, int cap, int nEixos) {
         this.placa=placa;
         this.marca=marca;
@@ -24,12 +24,12 @@ public class VeiculoUtilitario implements Veiculo {
 
     @Override
     public String getPlaca() {
-        return this.placa;
+        return null;
     }
 
     @Override
     public String getMarca() {
-        return this.marca;
+        return null;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class VeiculoUtilitario implements Veiculo {
 
     @Override
     public int getAno() {
-        return this.ano;
+        return 0;
     }
 
     @Override
@@ -62,6 +62,6 @@ public class VeiculoUtilitario implements Veiculo {
     @Override
     public void printAtrib() {
         System.out.println("Tipo: Utilitario Placa: "+this.placa+" Marca: "+this.marca+" Modelo: "+this.modelo+" Ano: "+this.ano+" Valor: "+this.valor+" Capacidade de carga (em Toneladas): "+this.capTon+" Numeros de Eixos: "+this.numEixos );
-        
+
     }
 }
