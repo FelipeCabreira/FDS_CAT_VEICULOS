@@ -27,12 +27,12 @@ public class CatalogoVeiculos {
         vcat.add(new VeiculoPasseio("FAA123","OJ","Dill",2003,20500,15)); 
     }
 
-    public List<Veiculo> consultaPorPlaca(String busca) {
+    public Veiculo consultaPorPlaca(String busca) {
         
-        ArrayList<Veiculo> vres=new ArrayList<>();
+        Veiculo vres=null;
         for (Veiculo veiculo : vcat) {
             if(busca.compareToIgnoreCase(veiculo.getPlaca())==0){
-                vres.add(veiculo);
+                vres=veiculo;
                 break;
             }
         }
@@ -54,6 +54,17 @@ public class CatalogoVeiculos {
         ArrayList<Veiculo> vres=new ArrayList<>();
         for (Veiculo veiculo : vcat) {
             if(busca==veiculo.getAno()){
+                vres.add(veiculo);
+                
+            }
+        }
+        return vres;
+    }
+    public List<Veiculo> consultaPorTipo(String busca) {
+        
+        ArrayList<Veiculo> vres=new ArrayList<>();
+        for (Veiculo veiculo : vcat) {
+            if(busca.compareToIgnoreCase(veiculo.getTipo())==0){
                 vres.add(veiculo);
                 
             }

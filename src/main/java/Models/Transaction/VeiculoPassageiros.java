@@ -48,6 +48,10 @@ public class VeiculoPassageiros implements Veiculo {
         return 0;
     }
 
+    public String getTipo(){
+        return "Passageiro";
+    }
+
     @Override
     public void printAtrib() {
         System.out.println("Tipo:Passageiro Placa: "+this.placa+" Marca: "+this.marca+" Modelo: "+this.modelo+" Ano: "+this.ano+" Valor: "+this.valor+" Capacidade de Passageiros: "+this.numPassageiros );

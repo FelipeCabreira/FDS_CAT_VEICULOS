@@ -48,6 +48,10 @@ public class VeiculoPasseio implements Veiculo {
     private double consumoKmLt(){
         return 0;
     }
+    public String getTipo(){
+        return "Passeio";
+    }
+
 
     @Override
     public void printAtrib() {

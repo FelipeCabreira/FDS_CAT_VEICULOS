@@ -54,6 +54,10 @@ public class VeiculoUtilitario implements Veiculo {
     private int nroEixos(){
         return 0;
     }
+    public String getTipo(){
+        return "Utilitario";
+    }
+
 
     @Override
     public void printAtrib() {
