@@ -24,7 +24,7 @@ public class FdsCatVeiculos {
             System.out.println(">>>>> Class instancied");
             System.out.println(">>>>> ######");
             System.out.println(">>>>> ######");
-            File file = new File("C:\\Users\\felipe_cabreira\\IdeaProjects\\PUCRS\\FDS\\src\\main\\resources\\DB_Veiculos.txt");
+            File file = new File("./\\src\\main\\resources\\DB_Veiculos.txt");
             System.out.println(">>>>> File: ... ---- " + file.getName());
             System.out.println(">>>>> Reading file from: ... ---- " + file.getPath());
             ArrayList<String> names = new ArrayList<String>();
