@@ -37,7 +37,7 @@ public class VeiculoPasseio implements Veiculo {
 
     @Override
     public int getAno() {
-        return 0;
+        return this.ano;
     }
 
     @Override

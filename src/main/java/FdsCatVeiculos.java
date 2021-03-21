@@ -23,6 +23,15 @@ public class FdsCatVeiculos {
                 veiculo.printAtrib();
             }
         }
+        lv= cv.consultaPorAno(2003);
+        if(lv.isEmpty()){
+            System.out.println("Ano nao encontrado");
+        }else{
+            for (Veiculo veiculo : lv) {
+                veiculo.printAtrib();
+            }
+        }
+
     
     }
 }

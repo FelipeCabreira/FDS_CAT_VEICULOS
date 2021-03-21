@@ -20,29 +20,40 @@ public class CatalogoVeiculos {
 
         vcat.add(new VeiculoUtilitario("FII123","JJ","Dill",2008,20500,5,4)); 
         vcat.add(new VeiculoUtilitario("FLL123","GM","Dill",2007,20500,5,4)); 
-        vcat.add(new VeiculoUtilitario("FKK123","JL","Dill",2002,20500,5,4)); 
+        vcat.add(new VeiculoUtilitario("FKK123","JL","Dill",2003,20500,5,4)); 
 
         vcat.add(new VeiculoPasseio("FFF123","HJ","Dill",2006,20500,15));     
         vcat.add(new VeiculoPasseio("FYY123","AJ","Dill",2005,20500,15));     
         vcat.add(new VeiculoPasseio("FAA123","OJ","Dill",2003,20500,15)); 
     }
 
-    public List<Veiculo> consultaPorPlaca(String vefPlaca) {
+    public List<Veiculo> consultaPorPlaca(String busca) {
         
         ArrayList<Veiculo> vres=new ArrayList<>();
         for (Veiculo veiculo : vcat) {
-            if(vefPlaca.compareToIgnoreCase(veiculo.getPlaca())==0){
+            if(busca.compareToIgnoreCase(veiculo.getPlaca())==0){
                 vres.add(veiculo);
                 break;
             }
         }
         return vres;
     }
-    public List<Veiculo> consultaPorMarca(String vefPlaca) {
+    public List<Veiculo> consultaPorMarca(String busca) {
         
         ArrayList<Veiculo> vres=new ArrayList<>();
         for (Veiculo veiculo : vcat) {
-            if(vefPlaca.compareToIgnoreCase(veiculo.getMarca())==0){
+            if(busca.compareToIgnoreCase(veiculo.getMarca())==0){
+                vres.add(veiculo);
+                
+            }
+        }
+        return vres;
+    }
+    public List<Veiculo> consultaPorAno(int busca) {
+        
+        ArrayList<Veiculo> vres=new ArrayList<>();
+        for (Veiculo veiculo : vcat) {
+            if(busca==veiculo.getAno()){
                 vres.add(veiculo);
                 
             }
