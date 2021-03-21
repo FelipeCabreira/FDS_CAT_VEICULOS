@@ -7,4 +7,8 @@ public interface Veiculo {
     public String getModelo();
     public int getAno();
     public double getValor();
+    public void printAtrib();
+    public String getTipo();
+
+    
 }
