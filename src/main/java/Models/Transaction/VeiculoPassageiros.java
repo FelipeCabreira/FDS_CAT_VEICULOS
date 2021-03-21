@@ -4,6 +4,15 @@ import Models.Interfaces.Veiculo;
 
 public class VeiculoPassageiros implements Veiculo {
     public int numPassageiros=0;
+    public VeiculoPassageiros(String placa, String marca, String modelo, int ano, double valor, int nPass) {
+        this.placa=placa;
+        this.marca=marca;
+        this.modelo=modelo;
+        this.ano=ano;
+        this.valor=valor;
+        this.numPassageiros=nPass;
+    }
+
     @Override
     public String getPlaca() {
         return null;

@@ -7,6 +7,16 @@ public class VeiculoUtilitario implements Veiculo {
     public int numEixos=0;
     
     
+    public VeiculoUtilitario(String placa, String marca, String modelo, int ano, double valor, int cap, int nEixos) {
+        this.placa=placa;
+        this.marca=marca;
+        this.modelo=modelo;
+        this.ano=ano;
+        this.valor=valor;
+        this.capTon=cap;
+        this.numEixos=nEixos;
+    }
+
     @Override
     public String getPlaca() {
         return null;
