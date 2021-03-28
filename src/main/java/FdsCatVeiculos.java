@@ -1,3 +1,7 @@
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import Controllers.CatalogoVeiculos;
@@ -20,18 +24,22 @@ public class FdsCatVeiculos {
     }
 
     public static void initialize() {
-
-        System.out.println("ALO");
-        populateVehicleList();
         consultVehicleCatalog();
     }
 
     public static void consultVehicleCatalog() {
+        consultasVeiculoPasseio();
+        consultasVeiculoPassageiros();
+        consultasVeiculoUtilitario();
+    }
+
+    public static void consultasVeiculoPasseio() {
         CatalogoVeiculos cv = new CatalogoVeiculos();
 
-        cv.initVcat();
-        List<Veiculo> lv;
+        cv.initVcat("src/main/resources/DB_VeiculoPasseio.csv");
+        System.out.println("FILE - VEICULO PASSEIO");
 
+        List<Veiculo> lv;
 
         Veiculo vv = cv.consultaPorPlaca("FLL123");
         if (vv == null) {
@@ -39,7 +47,6 @@ public class FdsCatVeiculos {
         } else {
             vv.printAtrib();
         }
-
 
         lv = cv.consultaPorMarca("GM");
         if (lv.isEmpty()) {
@@ -50,7 +57,6 @@ public class FdsCatVeiculos {
             }
         }
 
-
         lv = cv.consultaPorAno(2003);
         if (lv.isEmpty()) {
             System.out.println("Ano nao encontrado");
@@ -60,7 +66,6 @@ public class FdsCatVeiculos {
             }
         }
 
-
         lv = cv.consultaPorTipo("Passageiro");
         if (lv.isEmpty()) {
             System.out.println("Tipo nao encontrado");
@@ -69,43 +74,77 @@ public class FdsCatVeiculos {
                 veiculo.printAtrib();
             }
         }
+
     }
 
-    public static void populateVehicleList() {
-        CatalogoVeiculos cv = new CatalogoVeiculos();
+    public static void consultasVeiculoPassageiros() {
+        CatalogoVeiculos cv2 = new CatalogoVeiculos();
 
-        try {
-            System.out.println(">>>>> Class instancied");
-            System.out.println(">>>>> ######");
-            System.out.println(">>>>> ######");
-            File file = new File("./\\src\\main\\resources\\DB_Veiculos.txt");
-            System.out.println(">>>>> File: ... ---- " + file.getName());
-            System.out.println(">>>>> Reading file from: ... ---- " + file.getPath());
-            ArrayList<String> names = new ArrayList<String>();
-            Scanner in = new Scanner(file);
-            System.out.println(">>>>> Scanner instancied");
-            System.out.println(">>>>> Reading file");
+        cv2.initVcat("src/main/resources/DB_VeiculoPassageiros.csv");
+        System.out.println("FILE - VEICULO PASSAGEIROS");
 
-            while (in.hasNextLine()) {
-                cv.addCountVehicle();
-                names.add(in.nextLine());
-            }
-            System.out.println("A total of " + cv.getCountVehicle() + " vehicles were added to the list");
-            System.out.println(">>>>> Finished");
-            System.out.println(">>>>> #######");
-            System.out.println(">>>>> #######");
-            System.out.println(">>>>> Sort file");
-            Collections.sort(names);
-            for (int i = 0; i < names.size(); ++i) {
-                System.out.println(names.get(i));
-            }
-            System.out.println(">>>>> Finished");
+        List<Veiculo> lv2;
 
-
-        } catch (IOException io) {
-            System.out.println("Error: " + io.getMessage());
+        Veiculo vv2 = cv2.consultaPorPlaca("FLL123");
+        if (vv2 == null) {
+            System.out.println("Placa nao encontrada");
+        } else {
+            vv2.printAtrib();
         }
 
+        lv2 = cv2.consultaPorMarca("GM");
+        if (lv2.isEmpty()) {
+            System.out.println("Marca nao encontrada");
+        } else {
+            for (Veiculo veiculo : lv2) {
+                veiculo.printAtrib();
+            }
+        }
+
+        lv2 = cv2.consultaPorAno(2003);
+        if (lv2.isEmpty()) {
+            System.out.println("Ano nao encontrado");
+        } else {
+            for (Veiculo veiculo : lv2) {
+                veiculo.printAtrib();
+            }
+        }
+    }
+
+    public static void consultasVeiculoUtilitario() {
+
+
+        CatalogoVeiculos cv3 = new CatalogoVeiculos();
+
+        cv3.initVcat("src/main/resources/DB_VeiculoUtilitario.csv");
+        System.out.println("FILE - VEICULO UTILITARIO");
+
+        List<Veiculo> lv3;
+
+        Veiculo vv3 = cv3.consultaPorPlaca("FLL123");
+        if (vv3 == null) {
+            System.out.println("Placa nao encontrada");
+        } else {
+            vv3.printAtrib();
+        }
+
+        lv3 = cv3.consultaPorMarca("GM");
+        if (lv3.isEmpty()) {
+            System.out.println("Marca nao encontrada");
+        } else {
+            for (Veiculo veiculo : lv3) {
+                veiculo.printAtrib();
+            }
+        }
+
+        lv3 = cv3.consultaPorAno(2003);
+        if (lv3.isEmpty()) {
+            System.out.println("Ano nao encontrado");
+        } else {
+            for (Veiculo veiculo : lv3) {
+                veiculo.printAtrib();
+            }
+        }
     }
 
 }

@@ -1,0 +1,19 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+H
+bin/main/DB_Veiculos.txt,5\4\5460278111ce7a5f4baaa35a3b898a44551b513b
+T
+$build/resources/main/DB_Veiculos.txt,c\7\c751831041ac779a8f5a3b495ff357e4d08cc02a
+_
+/src/main/java/Controllers/CatalogoVeiculos.java,4\b\4bb184b250452cb95909e49100e5a47e273473f3
+g
+7src/main/java/Models/Transaction/VeiculoUtilitario.java,e\4\e4ed5446aaf55cb3c8e2f87e2a119a6ac82ccf20
+\
+,src/main/java/Models/Interfaces/Veiculo.java,3\4\347b9c920e35d6fe2814b518c572f273d2d4ba47
+h
+8src/main/java/Models/Transaction/VeiculoPassageiros.java,c\0\c05f4bbe3655e5ce523cff30ed0548bb99f687d4
+d
+4src/main/java/Models/Transaction/VeiculoPasseio.java,5\2\52405808ba3d00ac032ce57fe824e663c317083d
+Q
+!src/main/java/FdsCatVeiculos.java,2\8\2890541e7ec15b38586ed219789f14cf81b8ce6f
