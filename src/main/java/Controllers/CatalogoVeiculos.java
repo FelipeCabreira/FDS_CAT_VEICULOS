@@ -22,7 +22,6 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 
-
 public class CatalogoVeiculos {
     private int countVeiculos;
     private ArrayList<String> listVeiculos = new ArrayList<String>();
@@ -33,6 +32,7 @@ public class CatalogoVeiculos {
     }
 
     public void initVcat(String pathVeiculosFile) {
+        System.out.println("INIT CAT");
         readFileCsv(pathVeiculosFile);
 
     }
@@ -115,10 +115,11 @@ public class CatalogoVeiculos {
             CSVParser csvParser = new CSVParser(read, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord : csvParser) {
+                System.out.println("CSV FILE INFORMATION ABOVE");
                 String placa = csvRecord.get(0);
                 String marca = csvRecord.get(1);
                 String modelo = csvRecord.get(2);
-                double preco = Double.parseDouble(csvRecord.get(3));
+                String preco = csvRecord.get(3);
                 System.out.println("Record No - " + csvRecord.getRecordNumber());
                 System.out.println("---------------");
                 System.out.println("Placa : " + placa);
@@ -129,9 +130,10 @@ public class CatalogoVeiculos {
             }
 
         } catch (InvalidPathException e) {
-            e.getMessage();
+            System.out.println("INVALID PATH: " + e.getMessage());
         } catch (IOException e) {
-            e.getMessage();
+
+            System.out.println("ENTRADA ERRADA: " + e.getMessage());
         }
 
     }
