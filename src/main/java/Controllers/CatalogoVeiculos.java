@@ -17,10 +17,10 @@ import Models.Interfaces.Veiculo;
 import Models.Transaction.VeiculoPassageiros;
 import Models.Transaction.VeiculoPasseio;
 import Models.Transaction.VeiculoUtilitario;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
 
 
 public class CatalogoVeiculos {

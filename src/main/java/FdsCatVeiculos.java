@@ -36,7 +36,7 @@ public class FdsCatVeiculos {
     public static void consultasVeiculoPasseio() {
         CatalogoVeiculos cv = new CatalogoVeiculos();
 
-        cv.initVcat("src/main/resources/DB_VeiculoPasseio.csv");
+        cv.initVcat("../resources/DB_VeiculoPasseio.csv");
         System.out.println("FILE - VEICULO PASSEIO");
 
         List<Veiculo> lv;
@@ -80,7 +80,7 @@ public class FdsCatVeiculos {
     public static void consultasVeiculoPassageiros() {
         CatalogoVeiculos cv2 = new CatalogoVeiculos();
 
-        cv2.initVcat("src/main/resources/DB_VeiculoPassageiros.csv");
+        cv2.initVcat("../resources/DB_VeiculoPassageiros.csv");
         System.out.println("FILE - VEICULO PASSAGEIROS");
 
         List<Veiculo> lv2;
@@ -116,7 +116,7 @@ public class FdsCatVeiculos {
 
         CatalogoVeiculos cv3 = new CatalogoVeiculos();
 
-        cv3.initVcat("src/main/resources/DB_VeiculoUtilitario.csv");
+        cv3.initVcat("../resources/DB_VeiculoUtilitario.csv");
         System.out.println("FILE - VEICULO UTILITARIO");
 
         List<Veiculo> lv3;
